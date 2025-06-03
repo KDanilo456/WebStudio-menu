@@ -1,0 +1,15 @@
+
+@import "./variables.scss" ;
+@mixin decoratuve-img{
+    width: 250px;
+    height: 120px;
+    display: block;
+    text-align: center;
+    background: $backround-color;
+    line-height: 180px;
+}
+@mixin color-btn{
+    background-color: $decorative-color;
+    color: white;
+    border: solid  $decorative-color ;
+}

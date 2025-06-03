@@ -1,0 +1,524 @@
+@import "../utils/mixins";
+@import "../utils/variables.scss" ;
+.hero{
+    height: 600px;
+    text-align: center;
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/Img.png);
+    background-repeat: no-repeat;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.hero__title{
+    color: white;
+    margin-bottom: 41px;
+    margin-top: 214px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.hero__button{
+    @include color-btn ;
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    box-shadow: 0px 4px 4px 0px #00000026;
+}
+.hero__back-drop{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2) ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.hero__back-drop:not(.is-hidden) .hero__modal {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.hero__intro-text{
+    font-size: 20px;
+    margin-top: 40px;
+}
+.hero__back-drop .hero__modal.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.hero__modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50vh);
+    min-width: 528px;
+    min-height: 581px;
+    // max-width: 528px;
+    // max-height: 581px;
+    background-color: white;
+    transform: translate(-50%, 100%);
+    transition: all ease-in-out 0.5s;
+}
+.hero__form{
+    font-size: 20px;
+    min-width: 448px;
+    min-height: 23px;
+    font-weight: 700;
+    margin-top: 10px;
+    position: relative;
+    justify-content: center;
+}
+.hero__name{
+    position: relative;
+    left: 20px;
+    text-align: start;
+    font-size: 12px;
+    color: $text-color;
+}
+.hero__label:focus-within svg{
+    color: $decorative-color;
+}
+label{
+    font-size: 0;
+}
+.hero__input{
+    width: 448px;
+    height: 40px;
+    padding-left: 35px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &:focus{
+        outline: 1px solid $decorative-color; 
+    }
+}
+.hero__user-svg{
+    z-index: 1;
+    position: relative;
+    right: 480px;
+    top: 5px;
+}
+.hero__user{
+    position: relative;
+    left: 11px;
+}
+.hero__tel{
+    position: relative;
+    left: 11px;
+}
+.hero__email{
+    position: relative;
+    left: 11px;
+}
+.hero__text-tel{
+    position: relative;
+    text-align: start;
+    left: 20px;
+    font-size: 12px;
+    color: $text-color;
+}
+.hero__tel-svg{
+    position: relative;
+    right: 91%;
+    top: 5px;
+    z-index: 1;
+}
+.hero__email-section{
+    fill: $decorative-color;
+}
+.hero__text-email{
+    position: relative;
+    text-align: start;
+    left: 20px;
+    font-size: 12px;
+    color: $text-color;
+}
+.hero__email-svg{
+    position: relative;
+    right: 91%;
+    top: 5px;
+    z-index: 1;
+}
+.hero__input:focus{
+    outline: 1px solid $decorative-color;
+}
+.hero__text-comentar{
+    position: relative;
+    text-align: start;
+    left: 20px;
+    font-size: 12px;
+    color: $text-color;
+}
+textarea{
+    width: 484px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &:focus{
+        outline: 1px solid $decorative-color;
+    }
+}
+.hero__privacy-policy{
+ 
+    position: relative;
+    right: 10px;
+}
+.is-hidden{
+    opacity: 0;
+    pointer-events: none
+}
+.hero__checkbox{
+    max-width: 16px;
+    max-height: 15px;
+    position: absolute;
+    left: 85%;
+}
+.hero__text-privacy-policy{
+    font-size: 14px;
+    color: $text-color;
+}
+.hero__button{
+    margin-bottom: 174px;
+}
+span{
+    color: $decorative-color;
+    border-bottom: 1px solid $decorative-color;
+}
+.hero__btn-send{
+    width: 200px;
+    height: 50px;
+    max-width: 200px;
+    max-height: 50px;
+    @include color-btn ;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.hero__close{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 540px;
+    left: 485px;
+    min-width: 30px;
+    min-height: 30px;
+    right: 505px;
+    &:hover{
+        fill: $decorative-color;
+    }
+}
+.hero__svg-close{
+    position: relative;
+    top: 25%;
+}
+
+// lcvcv
+
+
+// .features li p{
+//    
+// }
+
+.features__list{
+    margin-top: 94px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    &-item{
+        padding-top: 94px;
+        max-width: 270px;
+        height: 248px;
+    }
+}
+.features__title{
+    padding-bottom: 17px;
+    font-size: 14px;
+}
+.features__text{
+    color: $text-color;
+    font-size: 14px;
+    max-width: 270px;
+}
+.features__item:nth-child(1)::before{
+    content: url(/img/antenna.png);
+    @include decoratuve-img ;
+}
+.features__item:nth-child(2)::before{
+    content: url(/img/clock.png);
+    @include decoratuve-img ;
+}
+.features__item:nth-child(3)::before{
+    content: url(/img/diagram.png);
+    @include decoratuve-img ;
+}
+.features__item:nth-child(4)::before{
+    content: url(/img/astronaut.png);
+    @include decoratuve-img ;
+}
+
+
+.activities{
+    margin-top: 208px;
+    height: 386px;
+&__title{
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 36px;
+}
+}
+.activities__list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+.activities__subtitle{
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative ;
+        bottom: 92px;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: Roboto;
+        padding: 30px;
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
+    }
+.employees{
+    background-color: $backround-color;
+    height: 708px;
+    max-height: 708px;
+    &__list{
+        gap: 30px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 120px;
+    }
+    &__title{
+        text-align: center;
+        padding-top: 101px;
+        font-size: 36px;
+    }
+}
+.employees__item{
+    box-shadow: 0px 2px 1px 0px #00000033;
+    height: 428px;
+    text-align: center;
+}
+.employees__name{
+    font-size: 16px;
+}
+.employees__text{
+    font-size: 16px;
+    color: $text-color;
+}
+.employees__img{
+    max-width: 270px;
+    max-height: 260px;
+}
+.employees__icon{
+    max-width: 44px;
+    max-height: 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    fill: $color-svg;
+    &:hover{
+        background-color: $decorative-color;
+        fill: white;
+    }
+    &::before{
+        left: -20px;
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background: rgba(233, 227, 227, 0.5) ;
+        transform: skewX(-25deg);
+    }
+}
+.employees__icon:hover::before{
+    animation-name: shine;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.employees__icon-list{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+@keyframes shine {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 125%;
+    }
+}
+.employees__svg{
+    position: relative;
+    top: 12px;
+}
+
+.clients{
+    text-align: center;
+    margin-bottom: 94px;
+}
+.clients__svg{
+    position: relative;
+    top: 25%;
+}
+.clients__list{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+.clients__item{
+    // padding-left: 63px;
+    // padding-right: 63px;
+    // padding-top: 22px;
+    // padding-bottom: 22px;
+    width: 170px;
+    height: 92px;
+    max-width: 170px;
+    max-height: 92px;
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+    fill: $color-svg;
+}
+.clients__item:hover{
+    border: 1px solid $decorative-color;
+    fill: $decorative-color;
+    animation-name: svg-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes svg-animation{
+    0% {
+        fill: rgba(33, 150, 243, 0.6);
+        border: 1px solid rgba(33, 150, 243, 0.6);
+    }
+    50% {
+        border: 1px solid $decorative-color;
+        fill: $decorative-color;
+    }
+    100% {
+        fill: rgba(33, 150, 243, 0.6);
+        border: 1px solid rgba(33, 150, 243, 0.6);
+    }
+}
+@media (max-width: 480px) {
+    main{
+        width: 480px;
+    }
+    .hero {
+        background-image: url(/img/mobile-bg-img.png);
+        height: 400px;
+    }
+    .hero__title{
+        padding: 0;
+        margin: 0;
+        margin-top: 130px;
+        margin-bottom: 42px;
+    }
+    .hero__button{
+        width: 200px;
+        height: 50px;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 700;
+        max-width: 200px;
+        border-radius: 4px;
+        max-height: 50px;
+    }
+    .features__list{
+        flex-wrap: wrap;
+        max-width: 480px;
+        height: 994px;
+        max-height: 994px;
+        margin-bottom: 151px;
+    }
+    .features__item{
+        margin-bottom: 40px;
+        max-height: 226px;
+    }
+    .features__title{
+        text-align: center;
+    }
+    .features__item:nth-child(1)::before{
+        content: url(/img/antenna.png);
+        @include decoratuve-img ;
+        width: 450px;
+        max-width: 450px;
+    }
+    .features__item:nth-child(2)::before{
+        content: url(/img/clock.png);
+        @include decoratuve-img ;
+        width: 450px;
+        max-width: 450px;
+    }
+    .features__item:nth-child(3)::before{
+        content: url(/img/diagram.png);
+        @include decoratuve-img ;
+        width: 450px;
+        max-width: 450px;
+    }
+    .features__item:nth-child(4)::before{
+        content: url(/img/astronaut.png);
+        @include decoratuve-img ;
+        width: 450px;
+        max-width: 450px;
+    }
+    .features__text{
+        max-width: 450px;
+        margin-left: 5px;
+    }
+    .activities{
+        display: none;
+    }
+    .employees{
+        max-height: 2761px;
+        height: 2761px;
+        width: 480px;
+    }
+    .employees__title{
+        margin-top: 0;
+        padding-top: 66px;
+    }
+    .employees__list{
+        flex-direction: column;
+        padding-left: 0;
+        max-height: 2578px;
+        height: 2578px;
+    }
+    .employees__item{
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+        height: 622px;
+    }
+    .employees__img{
+        width: 450px;
+        height: 460px;
+        max-width: none;
+        max-height: none;
+    }
+    .clients{
+        height: 400px;
+        max-height: 400px;
+        &__list{
+            flex-wrap: wrap;
+            position: static;
+            padding-left: 0;
+        }
+    }
+    span{
+        color: $text-color;
+        border-bottom: none;
+    }
+}
+
+

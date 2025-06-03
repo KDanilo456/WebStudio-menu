@@ -1,0 +1,85 @@
+@import "../utils/mixins";
+@import "../utils/variables.scss";
+.buttons{
+    padding-top: 120px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.buttons__button{
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 13px;
+    padding-bottom: 13px ;
+    background-color: $backround-color ;
+    color: $main-color;
+    border: none;
+    border-radius: 4px;
+    &:hover{
+        @include color-btn ;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 2px 2px 0px #0000001F;
+        animation-name: color-btn;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+    }
+}
+@keyframes color-btn {
+    0% {
+        background-color: $backround-color ;
+        color: $main-color;
+    }
+    100% {
+        background-color: $decorative-color;
+        color: white ;
+    }
+}
+
+
+.grids{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.grids__item{
+    flex-basis: calc((100% - 30%) / 3);
+    &:hover{
+        box-shadow: 1px 4px 6px 0px #00000029;
+    }
+    &:hover .grids__overlay-text{
+        transform: translateY(-310px);
+    }
+}
+.grids__img{
+    max-width: 365px;
+}
+.grids__title{
+    font-size: 18px;
+    padding-top: 26px;
+    padding-bottom: 16px;
+}
+.grids__overlay-text{
+    max-width: 322px;
+    max-height: 294px;
+    height: 294px;
+    font-size: 18px;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    position: absolute;
+    padding-top: 75px;
+    font-weight: 400;
+    color: white;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+}
+.grids__overlay{
+    display: block;
+    overflow: hidden;
+    max-width: 370px;
+    max-height: 294px;
+    position: relative;
+}

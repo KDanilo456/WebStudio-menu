@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */*,::after,::before{box-sizing:border-box}html{font-family:system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';line-height:1.15;-webkit-text-size-adjust:100%;tab-size:4}body{margin:0}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:currentcolor}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}">
+</head>
+<body class="portfolio-page">
+    <header >
+    <ul class="container nav">
+            <li class="nav__logo-item"> <img   src="./img/WebStudioheader.png" alt=""></li>
+            <li><a class="nav__item nav__studio" href="./index.html">Студія</a></li>
+            <li><a class="nav__item nav__portfolio" href="#">Портфоліо</a></li>
+            <li><a class="nav__item nav__contacts" href="/Конткати">Конткати</a></li>
+            <li class="nav__mail-item nav__item">
+                <svg class="mail__svg" width="16" height="12">
+                    <use href="./symbols.svg#mail"></use>
+                </svg>
+                <address ><a class="nav__mail" href="info@devstudio.com">info@devstudio.com</a></address>
+            </li>
+            <li class="nav__phone-item nav__item">
+                <svg class="phone__svg" width="10" height="16">
+                    <use href="./symbols.svg#phone-svg"></use>
+                </svg>
+                <address><a class="nav__tel" href="tel:+38 096 111 11 11">+38 096 111 11 11</a></address>
+            </li>
+        </ul>  
+        <button class="hamburger-btn" id="hamburgerBtn" onclick="openMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
+    </header>
+    <div id="mainPage">
+    <main class="container">
+        <ul class="buttons">
+            <li><button class="buttons__button">Усі</button></li>
+            <li><button class="buttons__button">Веб-сайти</button></li>
+            <li><button class="buttons__button">Додатки</button></li>
+            <li><button class="buttons__button">Дизайн</button></li>
+            <li><button class="buttons__button">Маркетинг</button></li>
+        </ul>
+        <ul class="grids">
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/notebook.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Технокряк</h1>
+                <p class="grids__text">Веб-сайт</p>
+                
+            </li>
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/basketball.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Постер New Orlean vs Golden Star</h1>
+                <p class="grids__text">Дизайн</p>
+            </li>
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/resturant.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Ресторан Seafood</h1>
+                <p class="grids__text">Додаток</p>
+            </li>
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/headphone.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Проєкт Prime</h1>
+                <p class="grids__text">Маркетинг</p>
+            </li>
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/blocks.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Проєкт Boxes</h1>
+                <p class="grids__text">Додаток</p>
+            </li>
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/computer1.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Inspiration has no Borders</h1>
+                <p class="grids__text">Веб-сайт</p>
+            </li>
+            <li class="grids__item"> 
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/book.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Видання Limited Edition</h1>
+                <p class="grids__text">Дизайн</p>
+            </li>
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/labeltag.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Проєкт LAB</h1>
+                <p class="grids__text">Маркетинг</p>
+            </li>
+            <li class="grids__item">
+                <div class="grids__overlay">
+                <img class="grids__img" src="./img/work.jpg" alt="">
+                <p class="grids__overlay-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                </p>
+                </div>
+                <h1 class="grids__title">Growing Business</h1>
+                <p class="grids__text" id="text">Додаток</p>
+            </li>
+        </ul>
+    </main>
+         <footer class="footer">  
+        <ul class="footer__list container">
+            <li class="footer__item-addres footer__item">
+                <img class="footer__logo" src="./img/WebStudio1.png" alt="">
+                <address class="footer__addres">м. Київ, пр-т Лесі Українки, 26</address>
+                <a class="footer__gmail" href="info@devstudio.com">info@devstudio.com</a>
+                <a class="footer__tel" href="tel:+38 096 111 11 11">+38 096 111 11 11</a>
+            </li>
+            <li class="footer__item-socials footer__item">
+                <h1 class="footer__title">приєднуйтесь</h1>
+                <div class="footer__icon">
+                    <svg class="footer__svg" width="20" height="20">
+                        <use href="./symbols.svg#instagram"></use>
+                    </svg>
+                    </div>
+                    <div class="footer__icon">
+                    <svg class="footer__svg" width="20" height="20">
+                        <use href="./symbols.svg#twitter"></use>
+                    </svg>
+                    </div>
+                    <div class="footer__icon">
+                    <svg class="footer__svg" width="20" height="20">
+                        <use href="./symbols.svg#facebook"></use>
+                    </svg>
+                    </div>
+                    <div class="footer__icon">
+                    <svg class="footer__svg" width="20" height="20">
+                        <use href="./symbols.svg#in"></use>
+                    </svg>
+                    </div>
+            </li>
+            <li class="footer__item-subscribe footer__item">
+                <h1 class="footer__subscribe-title">Підпишіться на розсилку</h1>
+                <form class="footer__form">
+                    
+                    <input class="footer__input" type="email" placeholder="E-mail">
+          
+                    <button class="footer__btn">
+                        Підписатися
+                    <svg class="footer__send-svg" width="24" height="24" >
+                        <use href="./symbol.svg#icon-send"></use>
+                    </svg>
+                    </button>
+                </form>
+            </li>
+        </ul>
+        </footer> 
+        </div>
+        <div  class="menu-overlay" id="menuOverlay">
+        <button class="close-btn" onclick="closeMenu()">✕</button>
+        <ul class="container menu-content">
+            <li class="menu-item"><a class="menu-link" href="./index.html">Студія</a></li>
+            <li class="menu-item"><a  class="menu-link" href="#">Портфоліо</a></li>
+            <li class="menu-item"><a  class="menu-link" href="/Конткати">Конткати</a></li>
+            <li  class="menu-tel-item">
+                <a class="nav__tel" href="tel:+38 096 111 11 11">+38 096 111 11 11</a>
+            </li>            
+            <li  class="menu-email-item">
+                <a class="nav__mail" href="info@devstudio.com">info@devstudio.com</a>
+            </li>
+        </ul>  
+        <div class="socialNetworks-list">
+            <div class="socialNetworks__item">
+                <a class="socialNetworks__link"  href="#">Instagram</a>
+            </div>
+            <div class="socialNetworks__item">
+                <a class="socialNetworks__link" href="#">Twitter</a>
+            </div>
+            <div  class="socialNetworks__item">
+                <a class="socialNetworks__link" href="#">Facebook</a>
+            </div>
+            <div  class="socialNetworks__item">
+                <a class="socialNetworks__link socialNetworks__last-link" href="#">LinkedIn</a>
+            </div>
+        </div>
+        </div>
+<script src="./script.js"></script>
+</body>
+</html>

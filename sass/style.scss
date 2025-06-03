@@ -1,0 +1,21 @@
+.index-page{
+@import "./components/webstudio.scss/footer";
+@import "./components/webstudio.scss/main";
+@import "./components/webstudio.scss/header";
+}
+.portfolio-page{
+@import "./components/portfolio.scss/footer";
+@import "./components/portfolio.scss/header";
+@import "./components/portfolio.scss/main";
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body{
+    font-family: "Roboto";
+}

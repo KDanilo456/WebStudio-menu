@@ -1,0 +1,17 @@
+@import "../utils/variables.scss";
+%transition{
+    content: "";
+    border: solid $decorative-color;
+    background-color: $decorative-color;
+    position: absolute;
+    width: 43px;
+    border-radius: 2px;
+    display: flex;
+    opacity: 0;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+}
+%hover{
+    transform: translate(0, 30px);
+    opacity: 1;
+}

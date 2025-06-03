@@ -1,0 +1,193 @@
+@import "../utils/mixins";
+@import "../utils/variables.scss";
+.footer{
+    background-color: $footer-backround-color;
+    height: 252px;
+}
+.footer__item-socials{
+    margin-left: 95px;
+    margin-right: 93px;
+    margin-bottom: 8px; 
+}
+.footer__item-subscribe{
+    margin-bottom: 5px;
+    max-height: 86px;
+    height: 86px;
+}
+.footer__form{
+    position: relative;
+    bottom: 10px;
+}
+.footer__logo{
+    padding-top: 62px;
+    padding-bottom: 25px;
+}
+.footer__gmail{
+    padding-bottom: 15px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__icon{
+    width: 44px;
+    height: 44px;
+    max-width: 44px;
+    max-height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: white;
+    &:hover{
+        background-color: $decorative-color;
+        animation-name: div-backround-color;
+        animation-duration: 0.5s;
+    }
+}
+@keyframes div-backround-color{
+    0% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        background-color: $decorative-color;
+    }
+}
+.footer__svg{
+    min-width: 20px;
+    min-height: 20px;
+    position: relative;
+    left: 12px;
+    top: 12px;
+}
+.footer__item-socials{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 207px;
+    max-height: 80px;
+    gap: 10px;
+}
+.footer__title{
+    font-size: 14px ;
+    color: white;
+    width: 163px;
+    text-transform: uppercase;
+}
+.footer__subscribe-title{
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.footer__input{
+    width: 358px;
+    height: 50px;
+    max-height: 50px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    &::placeholder{
+        font-size: 16px ;
+        font-family: Roboto;
+        color: rgba(255, 255, 255, 0.6);
+        position: relative;
+        left: 15px;     
+    }
+}
+.footer__btn{
+    padding-right: 63px;
+    padding-top: 15px;
+    width: 200px;
+    height: 54px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 700;
+    max-width: 200px;
+    padding-left: 16px;
+    @include color-btn ;
+    position: relative;
+    top: 30px;
+}
+.footer__send-svg{
+    position: relative;
+    left: 83px;
+    bottom: 20px;
+}
+.footer__addres{
+    color: white;
+    margin-bottom: 15px;
+}
+.footer__tel{
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 17px;
+}
+@media (max-width:480px){
+    .footer{
+        width: 480px;
+        height: 603px;
+        &__list{ 
+            width: 480px;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 0;
+        }
+        &__input{
+            width: 448px;
+            height: 48px;
+            padding: 0;
+            margin-bottom: 20px;
+
+        }
+        &__input-wrapper{
+            display: flex;
+            justify-content: center;
+            margin: 15px;
+        }
+        &__item-addres{
+            margin-bottom: 67px;
+            max-width: 232px;
+        }
+        &__item-socials{
+            margin-bottom: 63px;
+        }
+        &__svg{
+           left: 0;
+        }
+        &__gmail{
+            width: 232px;
+            display: block ;
+            margin-top: 16px;
+        }
+        &__tel{
+            color: rgba(255, 255, 255, 0.6);
+        }
+        &__title{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__send-svg{
+            position: relative;
+            left: 85px;
+            bottom: 20px;
+        }
+        &__btn{
+           position: static;
+           padding-top: 15px;
+        }
+        &__form{
+            position: static;
+        }
+        &__subscribe-title{
+            margin-bottom: 20px;
+        }
+    }
+}
